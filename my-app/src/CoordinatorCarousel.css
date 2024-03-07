@@ -1,0 +1,95 @@
+/* Styling for card container */
+.coordinator-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Ensures image stays within the card */
+    margin: 0 10px; /* Right and left margin between each card */
+    transition: transform 0.3s ease; /* Apply transition for smooth hover effect */
+}
+
+/* Styling for card hover effect */
+.coordinator-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for coordinator image */
+.coordinator-card img {
+    width: 100%; /* Ensures image fills the card horizontally */
+    height: auto; /* Automatically adjusts height */
+    object-fit: cover; /* Scales the image to cover the entire container */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Styling for card content */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for coordinator name */
+.card-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333333; /* Dark gray text color */
+}
+
+/* Styling for coordinator roles */
+.card-content p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666666; /* Light gray text color */
+}
+
+/* Add margin between cards */
+.coordinator-carousel {
+    margin: 0 -10px; /* Negative margin to offset the margin on individual cards */
+    padding-left: calc((100% - var(--card-width)) / 2); /* Center the first card */
+}
+
+/* Ensure proper spacing between cards */
+.slick-slide {
+    margin: 0 10px;
+}
+.slick-slide {
+    width: 250px; /* Set a fixed width for each slide */
+    height: 400px; /* Set a fixed height for each slide */
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
+    transform: scale(0.9);
+    display: flex; /* Add display flex to center the content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+  }
+  
+  .coordinator-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff; /* White background */
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      overflow: hidden; /* Ensures image stays within the card */
+      width: 100%; /* Make the card take up the full width of the slide */
+      height: 100%; /* Make the card take up the full height of the slide */
+      transition: transform 0.3s ease; /* Apply transition for smooth hover effect */
+  }
+  
+  /* Add margin between cards */
+  .coordinator-carousel {
+      margin: 0 -10px; /* Negative margin to offset the margin on individual cards */
+      padding-left: calc((100% - var(--card-width)) / 2); /* Center the first card */
+  }
+  
+  /* Ensure proper spacing between cards */
+  .slick-slide {
+      margin: 0 10px;
+  }

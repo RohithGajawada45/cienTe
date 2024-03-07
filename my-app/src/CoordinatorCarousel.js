@@ -1,43 +1,27 @@
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import './CoordinatorCarousel.css'; // Import the CSS file
 
 const CoordinatorCarousel = ({ coordinators }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
-    <Slider {...settings}>
-      {coordinators.map((coordinator, index) => (
-        <div key={index}>
-          <img src={coordinator.imgSrc} alt={coordinator.name} />
-          <h3>{coordinator.name}</h3>
-          <p>{coordinator.roles.join(', ')}</p>
-        </div>
-      ))}
-    </Slider>
+    <div className="carousel-container">
+      <input type="radio" id="item1" name="carousel" defaultChecked />
+      <input type="radio" id="item2" name="carousel" />
+      <input type="radio" id="item3" name="carousel" />
+      <input type="radio" id="item4" name="carousel" />
+      <input type="radio" id="item5" name="carousel" />
+
+      <main id="carousel">
+        {coordinators.map((coordinator, index) => (
+          <div key={index} className={`item item${index + 1}`}>
+            <img src={coordinator.imgSrc} alt={coordinator.name} />
+            <div className="card-content">
+              <h3>{coordinator.name}</h3>
+              <p>{coordinator.roles.join(', ')}</p>
+            </div>
+          </div>
+        ))}
+      </main>
+    </div>
   );
 };
 
